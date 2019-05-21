@@ -14,8 +14,25 @@
 		<link rel="stylesheet" type="text/css" media="all" href="css/camera.css">
 		<link rel="stylesheet" type="text/css" media="all" href="css/jquery.custom-scrollbar.css">
 		<link href="css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="themes/default/default.css" type="text/css" media="screen" />
+        <link rel="stylesheet" href="themes/light/light.css" type="text/css" media="screen" />
+        <link rel="stylesheet" href="themes/dark/dark.css" type="text/css" media="screen" />
+        <link rel="stylesheet" href="themes/bar/bar.css" type="text/css" media="screen" />
+        <link rel="stylesheet" href="othercss/nivo-slider.css" type="text/css" media="screen" />
+        <link rel="stylesheet" href="othercss/style.css" type="text/css" media="screen" />
+        <link rel="stylesheet" href="othercss/init.css" type="text/css"/>
+        <style>
+            .slider-wrapper {
+                /* width: 80%; */
+            }
+            .top-banner{
+                background-color: #333;
+            }
+        </style>
 	</head>
-
+    <?php
+        $db = new SQLite3('data/data.db');
+        ?>
 	<body>
 		<!--wide layout-->
 		<div class="wide_layout relative">
@@ -36,13 +53,22 @@
             <div class="container">
                 <div class="row clearfix">
                     <section class="col-lg-8 col-md-8 col-sm-8">
-                        <div class="camera_wrap m_bottom_0">
-                            <div data-src="images/slide_02.jpg" data-custom-thumb="images/slide_02.jpg">
+                        <div id="wrapper">
+                            <div class="slider-wrapper theme-default">
+                                <div id="slider" class="nivoSlider">
+
+                                    <a href="city_1.php?city_id=1&city_item_id=1"><img src="pic/hp/滨海县.png" data-thumb="pic/hp/滨海县.png" title="滨海县" /> </a>
+                                    <a href="city_1.php?city_id=2&city_item_id=1"><img src="pic/hp/丰县.png" data-thumb="pic/hp/丰县.png" title="丰县" /> </a>
+                                    <a href="city_1.php?city_id=5&city_item_id=1"><img src="pic/hp/淮安区.png" data-thumb="pic/hp/淮安区.png" title="淮安区" /> </a>
+                                    <a href="city_1.php?city_id=7&city_item_id=1"><img src="pic/hp/涟水县.png" data-thumb="pic/hp/涟水县.png" title="涟水县" /> </a>
+                                    <a href="city_1.php?city_id=9&city_item_id=1"><img src="pic/hp/泗洪县.png" data-thumb="pic/hp/泗洪县.png" title="泗洪县" /> </a>
+                                    <a href="city_1.php?city_id=10&city_item_id=1"><img src="pic/hp/泗阳县.png" data-thumb="pic/hp/泗阳县.png" title="泗阳县" /> </a>
+                                </div>
+                                <div id="htmlcaption" class="nivo-html-caption">
+                                    <strong>This</strong> is an example of a <em>HTML</em> caption with <a href="#">a link</a>.
+                                </div>
                             </div>
-                            <div data-src="images/slide_01.jpg" data-custom-thumb="images/slide_01.jpg">
-                            </div>
-                            <div data-src="images/slide_03.jpg" data-custom-thumb="images/slide_03.jpg">
-                            </div>
+                            <div class="footer-banner" style="width:728px; margin:0 auto"></div>
                         </div>
                         <!--blog post-->
                         <figure class="widget shadow r_corners wrapper m_bottom_30 m_top_20">
@@ -130,20 +156,22 @@
                                 <h3 class="color_light">通知公告</h3>
                             </figcaption>
                             <div class="widget_content">
-                                <article class="clearfix m_bottom_15">
-                                    <a href="#" class="color_dark d_block bt_link p_vr_0">通知公告1</a>
-                                    <p class="f_size_medium">2019-09-09</p>
-                                </article>
-                                <hr class="m_bottom_15">
-                                <article class="clearfix m_bottom_15">
-                                    <a href="#" class="color_dark d_block p_vr_0 bt_link">通知公告2</a>
-                                    <p class="f_size_medium">2019-09-09</p>
-                                </article>
-                                <hr class="m_bottom_15">
-                                <article class="clearfix m_bottom_5">
-                                    <a href="#" class="color_dark d_block p_vr_0 bt_link">通知公告3</a>
-                                    <p class="f_size_medium">2019-09-09</p>
-                                </article>
+                                <?php
+                                $results = $db->query("select * from menu_article where menu_id=1 and list_id=3 limit 3");
+                                while ($v = $results->fetchArray()) {
+                                    $title = $v['title'];
+                                    $date = $v['date'];
+                                    $article_id = $v['article_id'];
+                                    ?>
+                                    <article class="clearfix m_bottom_15">
+                                        <a href="article.php?menu_id=<?=$menu_id?>&list_id=<?=$list_id?>&article_id=<?=$article_id?>" class="color_dark d_block bt_link p_vr_0"><?= $title ?></a>
+                                        <p class="f_size_medium"><?= $date ?></p>
+                                    </article>
+                                    <hr class="m_bottom_15">
+                                    <?php
+                                }
+                                ?>
+
                             </div>
                         </figure>
 
@@ -252,6 +280,13 @@
 
 		<script src="myjs/foot.js"></script>
 		<script src="myjs/head.js"></script>
+        <script type="text/javascript" src="js/jquery.nivo.slider.js"></script>
+        <script type="text/javascript">
+
+            $(window).load(function() {
+                $('#slider').nivoSlider();
+            });
+        </script>
 
         <script>
             $(function () {

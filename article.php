@@ -70,10 +70,15 @@
                                     </div>
                                     <div class="m_top_20 article" style="margin-left: 10px; margin-right: 10px">
                                         <?php
-                                            for ($x=1; $x<=10; $x++) {
+                                            for ($x=1; $x<=20; $x++) {
                                                 $html_id = 'html' . $x;
                                                 $current_html = $v[$html_id];
-                                                if ($current_html[0] == 'p') {
+
+                                                if ($current_html[0] == '<') {
+                                        ?>
+                                                <div align="center"><?=$current_html?></div>
+                                        <?php
+                                                } else if ($current_html[0] == 'p') {
                                                     $current_html = substr($current_html, 1);
                                         ?>
 
