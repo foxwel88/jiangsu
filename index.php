@@ -44,13 +44,13 @@
 			<section class="breadcrumbs">
 				<div class="container">
 					<ul class="horizontal_list clearfix bc_list f_size_medium">
-						<li class="m_right_10 current"><a href="#" class="default_t_color">Home<i class="fa fa-angle-right d_inline_middle m_left_10"></i></a></li>
-						<li><a href="#" class="default_t_color">Blog</a></li>
+						<li class="m_right_10 current"><a href="#" class="default_t_color">首页<i class="fa fa-angle-right d_inline_middle m_left_10"></i></a></li>
+
 					</ul>
 				</div>
 			</section>
 			<!--content-->
-            <div class="container">
+            <div class="m_top_20 container">
                 <div class="row clearfix">
                     <section class="col-lg-8 col-md-8 col-sm-8">
                         <div id="wrapper">
@@ -64,29 +64,27 @@
                                     <a href="city_1.php?city_id=9&city_item_id=1"><img src="pic/hp/泗洪县.png" data-thumb="pic/hp/泗洪县.png" title="泗洪县" /> </a>
                                     <a href="city_1.php?city_id=10&city_item_id=1"><img src="pic/hp/泗阳县.png" data-thumb="pic/hp/泗阳县.png" title="泗阳县" /> </a>
                                 </div>
-                                <div id="htmlcaption" class="nivo-html-caption">
-                                    <strong>This</strong> is an example of a <em>HTML</em> caption with <a href="#">a link</a>.
-                                </div>
+
                             </div>
                             <div class="footer-banner" style="width:728px; margin:0 auto"></div>
                         </div>
                         <!--blog post-->
-                        <figure class="widget shadow r_corners wrapper m_bottom_30 m_top_20">
+                        <figure class="widget shadow r_corners wrapper m_bottom_30 m_top_5">
                             <figcaption>
                                 <h3 class="color_light">最新文章</h3>
                             </figcaption>
                             <hr class="divider_type_3 m_bottom_30">
                             <article class="m_bottom_20 clearfix">
                                 <a href="#" class="photoframe d_block d_xs_inline_b f_xs_none wrapper shadow f_left m_right_20 m_bottom_10 r_corners">
-                                    <img src="images/blog_img_5.jpg" class="tr_all_long_hover" alt="">
+                                    <img src="/pic/article/0725.png" style="width: 320px; height: 240px" class="tr_all_long_hover" alt="">
                                 </a>
                                 <div class="mini_post_content">
-                                    <h4 class="m_bottom_5"><a href="#" class="color_dark fw_medium">最新文章示例文章1</a></h4>
+                                    <h4 class="m_bottom_5"><a href="#" class="color_dark fw_medium">市驾培处在南京谷峰驾校会议室，召开年底扶贫驾培开班仪式并组织座谈</a></h4>
                                     <p class="f_size_medium m_bottom_10">2019-09-10, <a href="#" class="color_dark">招工信息</a></p>
                                     <hr>
                                     <hr class="m_bottom_15">
-                                    <p class="m_bottom_10">最新文章示例文章1最新文章示例文章1最新文章示例文章1最新文章示例文章1最新文章示例文章1最新文章示例文章1最新文章示例文章1最新文章示例文章1最新文章示例文章1最新文章示例文章1最新文章示例文章1最新文章示例文章1最新文章示例文章1最新文章示例文章1最新文章示例文章1最新文章示例文章1最新文章示例文章1最新文章示例文章1 </p>
-                                    <a href="#" class="tt_uppercase f_size_large">详情</a>
+                                    <p class="m_bottom_10">8月10日（星期五），市驾培处在南京谷峰驾校会议室，召开年底扶贫驾培开班仪式并组织座谈。六合区张国飞、江宁区张红燕，受市、区扶贫"三会"委托代表"三会"系统的学习参加仪式，并作了发言。下面是现场部分图片。 </p>
+                                    <a href="article.php?menu_id=5&list_id=4&article_id=72" class="tt_uppercase f_size_large">详情</a>
                                 </div>
                             </article>
                             <hr class="divider_type_3 m_bottom_30">
@@ -132,21 +130,7 @@
                                 </div>
                             </article>
                             <hr class="divider_type_3 m_bottom_10">
-                            <div class="row clearfix m_xs_bottom_30">
-                                <div class="col-lg-7 col-md-7 col-sm-7 col-xs-5">
-                                    <p class="d_inline_middle f_size_medium">Results 1 - 5 of 45</p>
-                                </div>
-                                <div class="col-lg-5 col-md-5 col-sm-5 col-xs-7 t_align_r">
-                                    <!--pagination-->
-                                    <a role="button" href="#" class="f_size_large button_type_10 color_dark d_inline_middle bg_cs_hover bg_light_color_1 t_align_c tr_delay_hover r_corners box_s_none"><i class="fa fa-angle-left"></i></a>
-                                    <ul class="horizontal_list clearfix d_inline_middle f_size_medium m_left_10">
-                                        <li class="m_right_10"><a class="color_dark" href="#">1</a></li>
-                                        <li class="m_right_10"><a class="scheme_color" href="#">2</a></li>
-                                        <li class="m_right_10"><a class="color_dark" href="#">3</a></li>
-                                    </ul>
-                                    <a role="button" href="#" class="f_size_large button_type_10 color_dark d_inline_middle bg_cs_hover bg_light_color_1 t_align_c tr_delay_hover r_corners box_s_none"><i class="fa fa-angle-right"></i></a>
-                                </div>
-                            </div>
+
                         </figure>
                     </section>
                     <aside class="col-lg-4 col-md-4 col-sm-4">
@@ -157,18 +141,24 @@
                             </figcaption>
                             <div class="widget_content">
                                 <?php
-                                $results = $db->query("select * from menu_article where menu_id=1 and list_id=3 limit 3");
+                                $results = $db->query("select * from menu_article where menu_id=1 and list_id=3 order by date DESC limit 3 ");
+                                $count = 0;
                                 while ($v = $results->fetchArray()) {
+                                    ++$count;
                                     $title = $v['title'];
                                     $date = $v['date'];
                                     $article_id = $v['article_id'];
                                     ?>
-                                    <article class="clearfix m_bottom_15">
+                                    <article class="clearfix m_bottom_5">
                                         <a href="article.php?menu_id=<?=$menu_id?>&list_id=<?=$list_id?>&article_id=<?=$article_id?>" class="color_dark d_block bt_link p_vr_0"><?= $title ?></a>
-                                        <p class="f_size_medium"><?= $date ?></p>
+                                        <p class="m_top_5 f_size_medium"><?= $date ?></p>
                                     </article>
-                                    <hr class="m_bottom_15">
-                                    <?php
+                                <?php
+                                    if ($count < 3) {
+                                        ?>
+                                        <hr class="m_bottom_15">
+                                        <?php
+                                    }
                                 }
                                 ?>
 
@@ -176,30 +166,33 @@
                         </figure>
 
 
-                        <a href="#" style="margin-top: 40px" class="d_block d_xs_inline_b r_corners m_bottom_30">
-                            <img src="pic/ad.png" alt="">
-                        </a>
-                        <!--Popular articles-->
-
                         <figure class="widget shadow r_corners wrapper m_bottom_30">
                             <figcaption>
                                 <h3 class="color_light">扶贫要闻</h3>
                             </figcaption>
                             <div class="widget_content">
-                                <article class="clearfix m_bottom_15">
-                                    <a href="#" class="color_dark d_block bt_link p_vr_0">扶贫要闻示例文章1</a>
-                                    <p class="f_size_medium">2019-09-09</p>
-                                </article>
-                                <hr class="m_bottom_15">
-                                <article class="clearfix m_bottom_15">
-                                    <a href="#" class="color_dark d_block p_vr_0 bt_link">扶贫要闻示例文章2</a>
-                                    <p class="f_size_medium">2019-09-09</p>
-                                </article>
-                                <hr class="m_bottom_15">
-                                <article class="clearfix m_bottom_5">
-                                    <a href="#" class="color_dark d_block p_vr_0 bt_link">扶贫要闻示例文章3</a>
-                                    <p class="f_size_medium">2019-09-09</p>
-                                </article>
+                                <?php
+                                $results = $db->query("select * from menu_article where menu_id=1 and list_id=1 order by date DESC limit 3 ");
+                                $count = 0;
+                                while ($v = $results->fetchArray()) {
+                                    ++$count;
+                                    $title = $v['title'];
+                                    $date = $v['date'];
+                                    $article_id = $v['article_id'];
+                                    ?>
+                                    <article class="clearfix m_bottom_5">
+                                        <a href="article.php?menu_id=<?=$menu_id?>&list_id=<?=$list_id?>&article_id=<?=$article_id?>" class="color_dark d_block bt_link p_vr_0"><?= $title ?></a>
+                                        <p class="m_top_5 f_size_medium"><?= $date ?></p>
+                                    </article>
+                                    <?php
+                                    if ($count < 3) {
+                                        ?>
+                                        <hr class="m_bottom_15">
+                                        <?php
+                                    }
+                                }
+                                ?>
+
                             </div>
                         </figure>
 
@@ -208,48 +201,72 @@
                                 <h3 class="color_light">工作动态</h3>
                             </figcaption>
                             <div class="widget_content">
-                                <article class="clearfix m_bottom_15">
-                                    <a href="#" class="color_dark d_block bt_link p_vr_0">工作动态示例文章1</a>
-                                    <p class="f_size_medium">2019-09-09</p>
-                                </article>
-                                <hr class="m_bottom_15">
-                                <article class="clearfix m_bottom_15">
-                                    <a href="#" class="color_dark d_block p_vr_0 bt_link">工作动态示例文章2</a>
-                                    <p class="f_size_medium">2019-09-09</p>
-                                </article>
-                                <hr class="m_bottom_15">
-                                <article class="clearfix m_bottom_5">
-                                    <a href="#" class="color_dark d_block p_vr_0 bt_link">工作动态示例文章3</a>
-                                    <p class="f_size_medium">2019-09-09</p>
-                                </article>
+                                <?php
+                                $results = $db->query("select * from menu_article where menu_id=1 and list_id=2 order by date DESC limit 3 ");
+                                $count = 0;
+                                while ($v = $results->fetchArray()) {
+                                    ++$count;
+                                    $title = $v['title'];
+                                    $date = $v['date'];
+                                    $article_id = $v['article_id'];
+                                    ?>
+                                    <article class="clearfix m_bottom_5">
+                                        <a href="article.php?menu_id=<?=$menu_id?>&list_id=<?=$list_id?>&article_id=<?=$article_id?>" class="color_dark d_block bt_link p_vr_0"><?= $title ?></a>
+                                        <p class="m_top_5 f_size_medium"><?= $date ?></p>
+                                    </article>
+                                    <?php
+                                    if ($count < 3) {
+                                        ?>
+                                        <hr class="m_bottom_15">
+                                        <?php
+                                    }
+                                }
+                                ?>
+
                             </div>
                         </figure>
 
                         <figure class="widget shadow r_corners wrapper m_bottom_30">
                             <figcaption>
-                                <h3 class="color_light">国家政策</h3>
+                                <h3 class="color_light">办事指南</h3>
                             </figcaption>
                             <div class="widget_content">
-                                <article class="clearfix m_bottom_15">
-                                    <a href="#" class="color_dark d_block bt_link p_vr_0">国家政策示例文章1</a>
-                                    <p class="f_size_medium">2019-09-09</p>
-                                </article>
-                                <hr class="m_bottom_15">
-                                <article class="clearfix m_bottom_15">
-                                    <a href="#" class="color_dark d_block p_vr_0 bt_link">工国家政策示例文章2</a>
-                                    <p class="f_size_medium">2019-09-09</p>
-                                </article>
-                                <hr class="m_bottom_15">
-                                <article class="clearfix m_bottom_5">
-                                    <a href="#" class="color_dark d_block p_vr_0 bt_link">国家政策示例文章3</a>
-                                    <p class="f_size_medium">2019-09-09</p>
-                                </article>
+                                <?php
+                                $results = $db->query("select * from menu_article where menu_id=7 order by date DESC limit 3 ");
+                                $count = 0;
+                                while ($v = $results->fetchArray()) {
+                                    ++$count;
+                                    $title = $v['title'];
+                                    $date = $v['date'];
+                                    $article_id = $v['article_id'];
+                                    ?>
+                                    <article class="clearfix m_bottom_5">
+                                        <a href="article.php?menu_id=<?=$menu_id?>&list_id=<?=$list_id?>&article_id=<?=$article_id?>" class="color_dark d_block bt_link p_vr_0"><?= $title ?></a>
+                                        <p class="m_top_5 f_size_medium"><?= $date ?></p>
+                                    </article>
+                                    <?php
+                                    if ($count < 3) {
+                                        ?>
+                                        <hr class="m_bottom_15">
+                                        <?php
+                                    }
+                                }
+                                ?>
+
                             </div>
                         </figure>
 
                     </aside>
-                    <!--left content column-->
-                    <!--right column-->
+
+                    <div id="div1">
+                        <ul>
+                            <li><img src="/pic/article/0725.png" alt=""></li>
+                            <li><img src="/pic/article/0725.png" alt=""></li>
+                            <li><img src="/pic/article/0725.png" alt=""></li>
+                            <li><img src="/pic/article/0725.png" alt=""></li>
+
+                        </ul>
+                    </div>
                 </div>
             </div>
 			<!--markup footer-->
@@ -293,5 +310,8 @@
                 $('#menuindex').addClass("current");
             });
         </script>
+
+
+
 	</body>
 </html>

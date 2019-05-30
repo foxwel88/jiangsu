@@ -21,15 +21,25 @@
 		<link rel="stylesheet" type="text/css" media="all" href="css/jquery.custom-scrollbar.css">
 		<!--font include-->
 		<link href="css/font-awesome.min.css" rel="stylesheet">
+        <link href="css/hire.css" rel="stylesheet">
 	</head>
+
 	<?php
             $db = new SQLite3('data/data.db');
-            $menu_id = $_GET['menu_id'];
-            $list_id = $_GET['list_id'];
+            $menu_id = 3;
+            $list_id = 3;
+            $job_id = $_GET['job_id'];
             $results = $db->query("select * from menu where father='$menu_id' and son='$list_id'");
             $v = $results->fetchArray();
             $menu_name = $v['fathername'];
             $list_name = $v['name'];
+
+
+            $results = $db->query("select * from job where id='$job_id'");
+            $v = $results->fetchArray();
+            $job_name = $v['job_name'];
+            $date = $v['date'];
+            $job_html = $v['html'];
     ?>
 	<body>
 		<!--wide layout-->
@@ -67,13 +77,11 @@
 											while ($v = $results->fetchArray()) {
 												$current_list_name = $v['name'];
 												$current_list_id = $v['son'];
-												$link = 'list.php?menu_id=' . $menu_id . '&list_id=' . $current_list_id;
-												if ($menu_id==3 and $current_list_id==3) $link= 'list_hire.php';
 												if ($current_list_id == $list_id) {
 										?>
 
                                                     <li class="active">
-                                                        <a href="<?=$link?>" class="f_size_large color_dark d_block">
+                                                        <a href="list.php?menu_id=<?=$menu_id?>&list_id=<?=$current_list_id?>" class="f_size_large color_dark d_block">
                                                             <b><?=$current_list_name?></b>
                                                         </a>
                                                     </li>
@@ -81,7 +89,7 @@
 
 										<?php   } else { ?>
                                                     <li>
-                                                        <a href="<?=$link?>" class="f_size_large color_dark d_block">
+                                                        <a href="list.php?menu_id=<?=$menu_id?>&list_id=<?=$current_list_id?>" class="f_size_large color_dark d_block">
                                                             <b><?=$current_list_name?></b>
                                                         </a>
                                                     </li>
@@ -121,43 +129,22 @@
 						</aside>
 						<!--left content column-->
 						<section class="col-lg-9 col-md-9 col-sm-9">
-                            <?php
-                                $results = $db->query("select * from menu_article where menu_id='$menu_id' and list_id='$list_id'");
-                                while ($v = $results->fetchArray()) {
-                                    $title = $v['title'];
-                                    $date = $v['date'];
-                                    $article_id = $v['article_id'];
-                                    ?>
-                                    <hr class="divider_type_3 m_bottom_10">
-                                    <article class="m_bottom_10 clearfix">
-                                        <div class="mini_post_content">
-                                            <h4 class="m_bottom_5" style="float:left; text-align:left"><a href="article.php?menu_id=<?=$menu_id?>&list_id=<?=$list_id?>&article_id=<?=$article_id?>"  class="color_dark fw_medium"><?= $title ?></a>
-                                            </h4>
-                                            <h5 class="m_bottom_5" style="float:right; text-align:right"><a href="#"  class="color_dark fw_medium"><?= $date ?></a>
-                                            </h5>
-                                        </div>
-                                    </article>
-                                    <?php
-                                }
-                            ?>
+                            <article class="m_bottom_15" style="">
+                                <div class="row clearfix m_bottom_15">
+                                    <div class="">
+                                        <h2 class="m_bottom_5 color_dark fw_medium m_xs_bottom_10" style="text-align: center;"><?=$job_name?></h2>
+
+                                        <hr class="divider_type_3 m_top_20 m_bottom_10 ">
+                                        <p class="f_size_medium" style="text-align: center;"><?=$date?></p>
+                                    </div>
+                                    <div class="m_top_20" style="margin-left: 10px; margin-right: 10px">
+                                        <div align="center"><?=$job_html?></div>
+                                    </div>
+                                </div>
+                            </article>
 
                             <hr class="divider_type_3 m_bottom_10">
 
-							<div class="row clearfix m_xs_bottom_30">
-								<div class="col-lg-7 col-md-7 col-sm-7 col-xs-5">
-									<p class="d_inline_middle f_size_medium">Results 1 - 5 of 45</p>
-								</div>
-								<div class="col-lg-5 col-md-5 col-sm-5 col-xs-7 t_align_r">
-									<!--pagination-->
-									<a role="button" href="#" class="f_size_large button_type_10 color_dark d_inline_middle bg_cs_hover bg_light_color_1 t_align_c tr_delay_hover r_corners box_s_none"><i class="fa fa-angle-left"></i></a>
-									<ul class="horizontal_list clearfix d_inline_middle f_size_medium m_left_10">
-										<li class="m_right_10"><a class="color_dark" href="#">1</a></li>
-										<li class="m_right_10"><a class="scheme_color" href="#">2</a></li>
-										<li class="m_right_10"><a class="color_dark" href="#">3</a></li>
-									</ul>
-									<a role="button" href="#" class="f_size_large button_type_10 color_dark d_inline_middle bg_cs_hover bg_light_color_1 t_align_c tr_delay_hover r_corners box_s_none"><i class="fa fa-angle-right"></i></a>
-								</div>
-							</div>
 						</section>
 						<!--right column-->
 					</div>
