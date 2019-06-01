@@ -327,10 +327,11 @@
 		<script src="js/waypoints.min.js"></script>
 
 		<script src="js/camera.min.js"></script>
+
+        <script src="myjs/foot.js"></script>
+        <script src="myjs/head.js"></script>
 		<script src="js/scripts.js"></script>
 
-		<script src="myjs/foot.js"></script>
-		<script src="myjs/head.js"></script>
         <script type="text/javascript" src="js/jquery.nivo.slider.js"></script>
         <script type="text/javascript">
 
