@@ -97,6 +97,16 @@ af{
 	background: #CD5C5C;
 }
 
+.select_color.red{
+	background-color:#e74c3c;
+}
+.tp-leftarrow:hover,.tp-rightarrow:hover{
+	background:#8B0000;
+}
+::-webkit-scrollbar-thumb{
+	background:#8B0000;
+}
+
 /* -----------------------------------
 
 	1. Reset default browser styles
@@ -526,10 +536,7 @@ mark{
 :-ms-input-placeholder {  
    color:#696e6e;
 }
-::-webkit-scrollbar{
-	width:10px;
-	background:#323a45;
-}
+
 ::-webkit-scrollbar-thumb{
 	-webkit-border-radius:4px;
 	border-radius:4px;
@@ -574,15 +581,6 @@ label[class*="required"]:after,.vertical_list_type_7 li:before,.first_letter_1 >
 .flex-direction-nav a:hover,.vertical_list_type_4 li:before,.vertical_list_type_8 li:before,
 .first_letter_2 > .fl,.info_block_type_2:hover [class*="icon_wrap"],#shopping_button:hover > a .count{
 	background:#e74c3c;
-}
-.select_color.red{
-	background-color:#e74c3c;	
-}
-.tp-leftarrow:hover,.tp-rightarrow:hover{
-	background: #d55a4e
-}
-::-webkit-scrollbar-thumb{
-	background:#e74c3c;	
 }
 
 /* -----------------------------------

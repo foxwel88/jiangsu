@@ -135,16 +135,9 @@
                                         <hr class="divider_type_3 m_top_20 m_bottom_10 ">
                                         <p class="f_size_medium" style="text-align: center;">25 January, 2013</p>
                                     </div>
-                                    <div class="m_top_20 m_bottom_30" style="margin-left: 10px; margin-right: 10px">
-                                        <?php
 
-                                        $current_html=str_replace("\n", "<p/><p>", $city_item_desc);
-                                        $current_html = '<p>' . $current_html . '</p>';
-                                        ?>
-                                        <text style="text-indent:25px; font-size: 16px; font-family:SimSun,serif; line-height:27px; text-align:justify; text-justify:inter-ideograph; "><?= $current_html ?></text>
-                                    </div>
 
-                                    <section class="portfolio_isotope_container four_columns">
+                                    <section class="portfolio_isotope_container three_columns">
                                         <?php
                                             $results = $db->query("select * from article where city_id = '$city_id' and item_id = '$city_item_id'");
                                             while ($v = $results->fetchArray()) {
@@ -165,6 +158,14 @@
 
                                         ?>
                                     </section>
+                                    <div class="m_top_20 m_bottom_30" style="margin-left: 10px; margin-right: 10px">
+                                        <?php
+
+                                        $current_html=str_replace("\n", "<p/><p>", $city_item_desc);
+                                        $current_html = '<p>' . $current_html . '</p>';
+                                        ?>
+                                        <text style="text-indent:25px; font-size: 16px; font-family:SimSun,serif; line-height:27px; text-align:justify; text-justify:inter-ideograph; "><?= $current_html ?></text>
+                                    </div>
 
                                 </div>
                             </article>

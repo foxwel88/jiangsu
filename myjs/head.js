@@ -1,6 +1,6 @@
 $(function () {
-    let header = `<header role="banner">
-					<section class="h_bot_part container">
+    let header = `<header role="banner" style="background-image: url(pic/hp/head.jpeg); background-size:cover">
+					<section class="h_bot_part container" >
 						<div class="clearfix row">
 							<div class="col-lg-6 col-md-6 col-sm-4 t_xs_align_c">
 								<a href="index.html" class="m_xs_bottom_15 d_xs_inline_b">
@@ -11,9 +11,9 @@ $(function () {
                                     <div class="col-lg-6 col-md-6 col-sm-6">
                                     </div>
                                    <div class="col-lg-6 col-md-6 col-sm-6">
-									<form class="relative type_2" role="search">
-										<input type="text" placeholder="Search" name="search" class="r_corners f_size_medium full_width">
-										<button class="f_right search_button tr_all_hover f_xs_none">
+									<form class="relative type_2" role="search" method ="get"  action="search_list.php">
+										<input type="text" placeholder="搜索" name="search" class="r_corners f_size_medium full_width">
+										<button class="f_right search_button tr_all_hover f_xs_none" type="submit">
 											<i class="fa fa-search"></i>
 										</button>
 									</form>

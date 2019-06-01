@@ -143,21 +143,7 @@
 
                             <hr class="divider_type_3 m_bottom_10">
 
-							<div class="row clearfix m_xs_bottom_30">
-								<div class="col-lg-7 col-md-7 col-sm-7 col-xs-5">
-									<p class="d_inline_middle f_size_medium">Results 1 - 5 of 45</p>
-								</div>
-								<div class="col-lg-5 col-md-5 col-sm-5 col-xs-7 t_align_r">
-									<!--pagination-->
-									<a role="button" href="#" class="f_size_large button_type_10 color_dark d_inline_middle bg_cs_hover bg_light_color_1 t_align_c tr_delay_hover r_corners box_s_none"><i class="fa fa-angle-left"></i></a>
-									<ul class="horizontal_list clearfix d_inline_middle f_size_medium m_left_10">
-										<li class="m_right_10"><a class="color_dark" href="#">1</a></li>
-										<li class="m_right_10"><a class="scheme_color" href="#">2</a></li>
-										<li class="m_right_10"><a class="color_dark" href="#">3</a></li>
-									</ul>
-									<a role="button" href="#" class="f_size_large button_type_10 color_dark d_inline_middle bg_cs_hover bg_light_color_1 t_align_c tr_delay_hover r_corners box_s_none"><i class="fa fa-angle-right"></i></a>
-								</div>
-							</div>
+
 						</section>
 						<!--right column-->
 					</div>

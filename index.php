@@ -28,6 +28,52 @@
             .top-banner{
                 background-color: #333;
             }
+            #wrap{
+                width: 97%;
+                height: 200px;
+                position: relative;
+                margin: 100px auto;
+                overflow: hidden;
+            }
+            #list{
+                position: absolute;
+                left: 0;
+                top: 0;
+                margin: 0;
+                padding: 0;
+                -webkit-animation: 20s move infinite linear;
+                width: 200%;
+            }
+            #list li {
+                list-style: none;
+                width: 320px;
+                height: 240px;
+                border: 1px solid #fff;
+                background: #000;
+                color: #fff;
+                font: 50px/98px Arial;
+                text-align: center;
+                float: left;
+            }
+            @-webkit-keyframes move{
+                0% {
+                    left: 0;
+                }
+                100% {
+                    left: -1000px;
+                }
+            }
+            @keyframes move {
+                0% {
+                    left: 0;
+                }
+                100% {
+                    left: -1000px;
+                }
+            }
+            #wrap:hover #list {
+                -webkit-animation-play-state: paused; /*动画暂停播放*/
+            }
         </style>
 	</head>
     <?php
@@ -79,8 +125,8 @@
                                     <img src="/pic/article/0725.png" style="width: 320px; height: 240px" class="tr_all_long_hover" alt="">
                                 </a>
                                 <div class="mini_post_content">
-                                    <h4 class="m_bottom_5"><a href="#" class="color_dark fw_medium">市驾培处在南京谷峰驾校会议室，召开年底扶贫驾培开班仪式并组织座谈</a></h4>
-                                    <p class="f_size_medium m_bottom_10">2019-09-10, <a href="#" class="color_dark">招工信息</a></p>
+                                    <h4 class="m_bottom_5"><a href="article.php?menu_id=5&list_id=4&article_id=72" class="color_dark fw_medium">市驾培处在南京谷峰驾校会议室，召开年底扶贫驾培开班仪式并组织座谈</a></h4>
+                                    <p class="f_size_medium m_bottom_10">2019-09-10, <a href="#" class="color_dark">驾驶培训</a></p>
                                     <hr>
                                     <hr class="m_bottom_15">
                                     <p class="m_bottom_10">8月10日（星期五），市驾培处在南京谷峰驾校会议室，召开年底扶贫驾培开班仪式并组织座谈。六合区张国飞、江宁区张红燕，受市、区扶贫"三会"委托代表"三会"系统的学习参加仪式，并作了发言。下面是现场部分图片。 </p>
@@ -90,46 +136,31 @@
                             <hr class="divider_type_3 m_bottom_30">
                             <article class="m_bottom_20 clearfix">
                                 <a href="#" class="photoframe d_block d_xs_inline_b f_xs_none wrapper shadow f_left m_right_20 m_bottom_10 r_corners">
-                                    <img src="images/blog_img_5.jpg" class="tr_all_long_hover" alt="">
+                                    <img src="/pic/article/10902.png" style="width: 320px; height: 240px" class="tr_all_long_hover" alt="">
                                 </a>
                                 <div class="mini_post_content">
-                                    <h4 class="m_bottom_5"><a href="#" class="color_dark fw_medium">最新文章示例文章1</a></h4>
-                                    <p class="f_size_medium m_bottom_10">2019-09-10, <a href="#" class="color_dark">招工信息</a></p>
+                                    <h4 class="m_bottom_5"><a href="article.php?menu_id=6&list_id=2&article_id=109" class="color_dark fw_medium">“碧桂园沪苏一对一帮扶基金”2018年度助学金发放仪式在南通举行</a></h4>
+                                    <p class="f_size_medium m_bottom_10">2019-06-01, <a href="#" class="color_dark">助学扶贫</a></p>
                                     <hr>
                                     <hr class="m_bottom_15">
-                                    <p class="m_bottom_10">最新文章示例文章1最新文章示例文章1最新文章示例文章1最新文章示例文章1最新文章示例文章1最新文章示例文章1最新文章示例文章1最新文章示例文章1最新文章示例文章1最新文章示例文章1最新文章示例文章1最新文章示例文章1最新文章示例文章1最新文章示例文章1最新文章示例文章1最新文章示例文章1最新文章示例文章1最新文章示例文章1 </p>
-                                    <a href="#" class="tt_uppercase f_size_large">详情</a>
+                                    <p class="m_bottom_10">8月15日上午，由共青团南通市委、南通市希望工程办公室联合主办的“砥砺青春 圆梦大学”2018希望工程爱心助学公益活动暨“碧桂园沪苏一对一帮扶基金”2018年度助学金发放仪式在南通举行。江苏省扶贫“三会”理事长丁解民、副理事长陈贵希、张益新，省希望工程办公室负责人、省青少年发展基金会负责人薛保刚，南通市委宣传部常务副部长陈慧宇.</p>
+                                    <a href="article.php?menu_id=6&list_id=2&article_id=109" class="tt_uppercase f_size_large">详情</a>
                                 </div>
                             </article>
                             <hr class="divider_type_3 m_bottom_30">
                             <article class="m_bottom_20 clearfix">
                                 <a href="#" class="photoframe d_block d_xs_inline_b f_xs_none wrapper shadow f_left m_right_20 m_bottom_10 r_corners">
-                                    <img src="images/blog_img_5.jpg" class="tr_all_long_hover" alt="">
+                                    <img src="/pic/article/11501.png" style="width: 320px; height: 240px" class="tr_all_long_hover" alt="">
                                 </a>
                                 <div class="mini_post_content">
-                                    <h4 class="m_bottom_5"><a href="#" class="color_dark fw_medium">最新文章示例文章1</a></h4>
-                                    <p class="f_size_medium m_bottom_10">2019-09-10, <a href="#" class="color_dark">招工信息</a></p>
+                                    <h4 class="m_bottom_5"><a href="article.php?menu_id=6&list_id=2&article_id=115" class="color_dark fw_medium">淮阴区扶贫协会在省淮海中学举行“滴水筑梦”助学金发放仪式</a></h4>
+                                    <p class="f_size_medium m_bottom_10">2019-09-10, <a href="#" class="color_dark">助学扶贫</a></p>
                                     <hr>
                                     <hr class="m_bottom_15">
-                                    <p class="m_bottom_10">最新文章示例文章1最新文章示例文章1最新文章示例文章1最新文章示例文章1最新文章示例文章1最新文章示例文章1最新文章示例文章1最新文章示例文章1最新文章示例文章1最新文章示例文章1最新文章示例文章1最新文章示例文章1最新文章示例文章1最新文章示例文章1最新文章示例文章1最新文章示例文章1最新文章示例文章1最新文章示例文章1 </p>
-                                    <a href="#" class="tt_uppercase f_size_large">详情</a>
+                                    <p class="m_bottom_10">最11月20日,淮安市淮阴区扶贫开发协会在省淮海中学举行2018年度“滴水筑梦”助学金发放仪式。现场向该校100名家庭贫困学生发放助学金20万元。这批助学金由江苏银行捐助,是在去年已经捐赠20万元的基础上的第二次捐款。</p>
+                                    <a href="article.php?menu_id=6&list_id=2&article_id=115" class="tt_uppercase f_size_large">详情</a>
                                 </div>
                             </article>
-                            <hr class="divider_type_3 m_bottom_30">
-                            <article class="m_bottom_20 clearfix">
-                                <a href="#" class="photoframe d_block d_xs_inline_b f_xs_none wrapper shadow f_left m_right_20 m_bottom_10 r_corners">
-                                    <img src="images/blog_img_5.jpg" class="tr_all_long_hover" alt="">
-                                </a>
-                                <div class="mini_post_content">
-                                    <h4 class="m_bottom_5"><a href="#" class="color_dark fw_medium">最新文章示例文章1</a></h4>
-                                    <p class="f_size_medium m_bottom_10">2019-09-10, <a href="#" class="color_dark">招工信息</a></p>
-                                    <hr>
-                                    <hr class="m_bottom_15">
-                                    <p class="m_bottom_10">最新文章示例文章1最新文章示例文章1最新文章示例文章1最新文章示例文章1最新文章示例文章1最新文章示例文章1最新文章示例文章1最新文章示例文章1最新文章示例文章1最新文章示例文章1最新文章示例文章1最新文章示例文章1最新文章示例文章1最新文章示例文章1最新文章示例文章1最新文章示例文章1最新文章示例文章1最新文章示例文章1 </p>
-                                    <a href="#" class="tt_uppercase f_size_large">详情</a>
-                                </div>
-                            </article>
-                            <hr class="divider_type_3 m_bottom_10">
 
                         </figure>
                     </section>
@@ -258,13 +289,16 @@
 
                     </aside>
 
-                    <div id="div1">
-                        <ul>
-                            <li><img src="/pic/article/0725.png" alt=""></li>
-                            <li><img src="/pic/article/0725.png" alt=""></li>
-                            <li><img src="/pic/article/0725.png" alt=""></li>
-                            <li><img src="/pic/article/0725.png" alt=""></li>
-
+                    <div id="wrap">
+                        <ul id="list">
+                            <li><img src="/pic/hp/l1.png"  style="width: 320px;height: 240px" alt=""></li>
+                            <li><img src="/pic/hp/l2.png"  style="width: 320px;height: 240px" alt=""></li>
+                            <li><img src="/pic/hp/l3.png"  style="width: 320px;height: 240px" alt=""></li>
+                            <li><img src="/pic/hp/l4.png"  style="width: 320px;height: 240px" alt=""></li>
+                            <li><img src="/pic/hp/l5.png"  style="width: 320px;height: 240px" alt=""></li>
+                            <li><img src="/pic/hp/l6.jpg"  style="width: 320px;height: 240px" alt=""></li>
+                            <li><img src="/pic/hp/l7.jpg"  style="width: 320px;height: 240px" alt=""></li>
+                            <li><img src="/pic/hp/l8.jpg"  style="width: 320px;height: 240px" alt=""></li>
                         </ul>
                     </div>
                 </div>
