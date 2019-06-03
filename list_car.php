@@ -122,25 +122,27 @@
 						</aside>
 						<!--left content column-->
 						<section class="col-lg-9 col-md-9 col-sm-9">
-                            <?php
-                                $results = $db->query("select * from menu_article where menu_id='$menu_id' and list_id='$list_id' order by date DESC");
+                            <section class="portfolio_isotope_container three_columns">
+                                <?php
+                                $results = $db->query("select * from menu_car where menu_id = '$menu_id' and list_id = '$list_id'");
                                 while ($v = $results->fetchArray()) {
-                                    $title = $v['title'];
-                                    $date = $v['date'];
-                                    $article_id = $v['article_id'];
                                     ?>
-                                    <hr class="divider_type_3 m_bottom_10">
-                                    <article class="m_bottom_10 clearfix">
-                                        <div class="mini_post_content">
-                                            <h4 class="m_bottom_5" style="float:left; text-align:left"><a href="article.php?menu_id=<?=$menu_id?>&list_id=<?=$list_id?>&article_id=<?=$article_id?>"  class="color_dark fw_medium"><?= $title ?></a>
-                                            </h4>
-                                            <h5 class="m_bottom_5" style="float:right; text-align:right"><a href="#"  class="color_dark fw_medium"><?= $date ?></a>
-                                            </h5>
-                                        </div>
-                                    </article>
+                                    <div class="portfolio_item t_xs_align_c portraits">
+                                        <figure class="d_xs_inline_b">
+                                            <a href="<?=$v['link']?>"> <div class="photoframe with_buttons relative shadow r_corners wrapper m_bottom_15">
+                                                <img href="<?=$v['link']?>" src="pic/article/<?=$v['pic']?>" alt="" class="tr_all_long_hover">
+                                            </div></a>
+                                            <figcaption class="t_xs_align_l">
+                                                <h4 class="m_bottom_3" style="text-align: center"><a href="<?=$v['link']?>" class="color_dark"><b><?=$v['title']?></b></a>
+                                                </h4>
+                                            </figcaption>
+                                        </figure>
+                                    </div>
                                     <?php
                                 }
-                            ?>
+
+                                ?>
+                            </section>
 
                             <hr class="divider_type_3 m_bottom_10">
 
@@ -173,7 +175,6 @@
 		<script src="js/owl.carousel.min.js"></script>
 
 		<script src="js/waypoints.min.js"></script>
-
         <script src="myjs/foot.js"></script>
         <script src="myjs/head.js"></script>
         <script src="myjs/pop.js"></script>

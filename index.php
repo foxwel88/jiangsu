@@ -166,7 +166,7 @@
                     </section>
                     <aside class="col-lg-4 col-md-4 col-sm-4">
                         <!--widgets-->
-                        <figure class="widget shadow r_corners wrapper m_bottom_30">
+                        <figure class="widget shadow r_corners wrapper m_bottom_40">
                             <figcaption>
                                 <h3 class="color_light">通知公告</h3>
                             </figcaption>
@@ -195,7 +195,35 @@
 
                             </div>
                         </figure>
+                        <figure class="widget shadow r_corners wrapper m_bottom_30">
+                            <figcaption>
+                                <h3 class="color_light">产品求购信息专区</h3>
+                            </figcaption>
+                            <div class="widget_content">
+                                <?php
+                                $results = $db->query("select * from menu_article where menu_id=99 order by date DESC limit 3 ");
+                                $count = 0;
+                                while ($v = $results->fetchArray()) {
+                                    ++$count;
+                                    $title = $v['title'];
+                                    $date = $v['date'];
+                                    $link = $v['html1'];
+                                    ?>
+                                    <article class="clearfix m_bottom_5">
+                                        <a href="<?=$link?>" class="color_dark d_block bt_link p_vr_0"><?= $title ?></a>
+                                        <p class="m_top_5 f_size_medium"><?= $date ?></p>
+                                    </article>
+                                    <?php
+                                    if ($count < 3) {
+                                        ?>
+                                        <hr class="m_bottom_15">
+                                        <?php
+                                    }
+                                }
+                                ?>
 
+                            </div>
+                        </figure>
 
                         <figure class="widget shadow r_corners wrapper m_bottom_30">
                             <figcaption>
@@ -257,35 +285,7 @@
                             </div>
                         </figure>
 
-                        <figure class="widget shadow r_corners wrapper m_bottom_30">
-                            <figcaption>
-                                <h3 class="color_light">办事指南</h3>
-                            </figcaption>
-                            <div class="widget_content">
-                                <?php
-                                $results = $db->query("select * from menu_article where menu_id=7 order by date DESC limit 3 ");
-                                $count = 0;
-                                while ($v = $results->fetchArray()) {
-                                    ++$count;
-                                    $title = $v['title'];
-                                    $date = $v['date'];
-                                    $article_id = $v['article_id'];
-                                    ?>
-                                    <article class="clearfix m_bottom_5">
-                                        <a href="article.php?menu_id=<?=$menu_id?>&list_id=<?=$list_id?>&article_id=<?=$article_id?>" class="color_dark d_block bt_link p_vr_0"><?= $title ?></a>
-                                        <p class="m_top_5 f_size_medium"><?= $date ?></p>
-                                    </article>
-                                    <?php
-                                    if ($count < 3) {
-                                        ?>
-                                        <hr class="m_bottom_15">
-                                        <?php
-                                    }
-                                }
-                                ?>
 
-                            </div>
-                        </figure>
 
                     </aside>
 

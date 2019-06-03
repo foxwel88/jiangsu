@@ -98,30 +98,9 @@
 							</figure>
 
 							<!--Popular articles-->
-							<figure class="widget shadow r_corners wrapper m_bottom_30">
-								<figcaption>
-									<h3 class="color_light">热门文章</h3>
-								</figcaption>
-								<div class="widget_content">
-									<article class="clearfix m_bottom_15">
-										<img src="images/article_img_1.jpg" alt="" class="f_left m_right_15 m_sm_bottom_10 f_sm_none f_xs_left m_xs_bottom_0">
-										<a href="#" class="color_dark d_block bt_link p_vr_0">热门文章1</a>
-										<p class="f_size_medium">50 comments</p>
-									</article>
-									<hr class="m_bottom_15">
-									<article class="clearfix m_bottom_15">
-										<img src="images/article_img_2.jpg" alt="" class="f_left m_right_15 m_sm_bottom_10 f_sm_none f_xs_left m_xs_bottom_0">
-										<a href="#" class="color_dark d_block p_vr_0 bt_link">热门文章2</a>
-										<p class="f_size_medium">34 comments</p>
-									</article>
-									<hr class="m_bottom_15">
-									<article class="clearfix m_bottom_5">
-										<img src="images/article_img_3.jpg" alt="" class="f_left m_right_15 m_sm_bottom_10 f_sm_none f_xs_left m_xs_bottom_0">
-										<a href="#" class="color_dark d_block p_vr_0 bt_link">热门文章3</a>
-										<p class="f_size_medium">21 comments</p>
-									</article>
-								</div>
-							</figure>
+							<div id="pop-article">
+
+                            </div>
 						</aside>
 						<!--left content column-->
 						<section class="col-lg-9 col-md-9 col-sm-9">
@@ -216,12 +195,12 @@
 		<script src="js/owl.carousel.min.js"></script>
 
 		<script src="js/waypoints.min.js"></script>
-
+        <script src="myjs/foot.js"></script>
+        <script src="myjs/head.js"></script>
+        <script src="myjs/pop.js"></script>
 		<script src="js/styleswitcher.js"></script>
 		<script src="js/camera.min.js"></script>
 		<script src="js/scripts.js"></script>
 
-		<script src="myjs/foot.js"></script>
-		<script src="myjs/head.js"></script>
 	</body>
 </html>

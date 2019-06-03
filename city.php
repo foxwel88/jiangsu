@@ -51,9 +51,11 @@
                     ?>
                             <div class="portfolio_item t_xs_align_c portraits">
                                 <figure class="d_xs_inline_b">
-                                    <div class="photoframe with_buttons relative shadow r_corners wrapper m_bottom_15">
-                                        <img src="pic/city/<?= $current_pic ?>" alt="" class="tr_all_long_hover">
-                                    </div>
+                                    <a href="city_1.php?city_id=<?=$current_city_id?>&city_item_id=1">
+                                        <div class="photoframe with_buttons relative shadow r_corners wrapper m_bottom_15">
+                                            <img src="pic/city/<?= $current_pic ?>" alt="" class="tr_all_long_hover">
+                                        </div>
+                                    </a>
                                     <figcaption class="t_xs_align_l">
                                         <h4 class="m_bottom_3" style="text-align: center"><a href="city_1.php?city_id=<?=$current_city_id?>&city_item_id=1" class="color_dark"><b><?= $current_city_name ?></b></a>
                                         </h4>
